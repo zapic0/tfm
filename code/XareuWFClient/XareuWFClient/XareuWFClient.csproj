@@ -1,0 +1,677 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{79C424F5-CAD7-4082-9F98-736B8FCD4B20}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XareuWFClient</RootNamespace>
+    <AssemblyName>XareuWFClient</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Args\GroupsArgs.cs" />
+    <Compile Include="Args\PageArgs.cs" />
+    <Compile Include="Args\PublicationArgs.cs" />
+    <Compile Include="Args\TagsArgs.cs" />
+    <Compile Include="Args\TextArgs.cs" />
+    <Compile Include="Args\UsersArgs.cs" />
+    <Compile Include="Controller\FormController.cs" />
+    <Compile Include="Controller\GroupController.cs" />
+    <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\PlaceController.cs" />
+    <Compile Include="Controller\PublicationController.cs" />
+    <Compile Include="Controller\TagsController.cs" />
+    <Compile Include="Controller\UsersController.cs" />
+    <Compile Include="Controller\VoteController.cs" />
+    <Compile Include="Controls\Group\GroupResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Group\GroupResult.Designer.cs">
+      <DependentUpon>GroupResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Group\GroupSearchPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Group\GroupSearchPage.Designer.cs">
+      <DependentUpon>GroupSearchPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Group\GroupTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Group\GroupTitle.Designer.cs">
+      <DependentUpon>GroupTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Main\BigTabs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Main\BigTabs.Designer.cs">
+      <DependentUpon>BigTabs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ControlPanel\ControlPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlPanel\ControlPanel.Designer.cs">
+      <DependentUpon>ControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Publication\PublicationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Publication\PublicationPage.Designer.cs">
+      <DependentUpon>PublicationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Publication\PublicationsSearchResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Publication\PublicationsSearchResult.Designer.cs">
+      <DependentUpon>PublicationsSearchResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tabs\ButtonTabs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Tabs\ButtonTabs.Designer.cs">
+      <DependentUpon>ButtonTabs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tag\TagTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Tag\TagTitle.Designer.cs">
+      <DependentUpon>TagTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\User\UserResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\User\UserResult.Designer.cs">
+      <DependentUpon>UserResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\User\UserSearchPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\User\UserSearchPage.Designer.cs">
+      <DependentUpon>UserSearchPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\User\UserTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\User\UserTitle.Designer.cs">
+      <DependentUpon>UserTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Util\GenericUserInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Util\GenericUserInformation.Designer.cs">
+      <DependentUpon>GenericUserInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Util\Pagination.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Util\Pagination.Designer.cs">
+      <DependentUpon>Pagination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Publication\Publication.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Publication\Publication.Designer.cs">
+      <DependentUpon>Publication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Publication\PublicationWithAnswers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Publication\PublicationWithAnswers.Designer.cs">
+      <DependentUpon>PublicationWithAnswers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Main\PublicationColumns.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Main\PublicationColumns.Designer.cs">
+      <DependentUpon>PublicationColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Util\SearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Util\SearchControl.Designer.cs">
+      <DependentUpon>SearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Util\SearchTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Util\SearchTextControl.Designer.cs">
+      <DependentUpon>SearchTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tag\TagResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Tag\TagResult.Designer.cs">
+      <DependentUpon>TagResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ControlPanel\TagsGroupsBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlPanel\TagsGroupsBox.Designer.cs">
+      <DependentUpon>TagsGroupsBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tag\TagsSearchPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Tag\TagsSearchPage.Designer.cs">
+      <DependentUpon>TagsSearchPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ControlPanel\UsersColumns.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlPanel\UsersColumns.Designer.cs">
+      <DependentUpon>UsersColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Util\VoteBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Util\VoteBox.Designer.cs">
+      <DependentUpon>VoteBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delegates\Delegates.cs" />
+    <Compile Include="FBasicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBasicForm.designer.cs">
+      <DependentUpon>FBasicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateGroup.Designer.cs">
+      <DependentUpon>CreateGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewPublication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewPublication.Designer.cs">
+      <DependentUpon>NewPublication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SubscribeToTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SubscribeToTag.Designer.cs">
+      <DependentUpon>SubscribeToTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Commands\Command.cs" />
+    <Compile Include="Model\Group\Group.cs" />
+    <Compile Include="Model\Group\GroupJoinRequest.cs" />
+    <Compile Include="Model\Group\GroupUsers.cs" />
+    <Compile Include="Model\Publication\Publication.cs" />
+    <Compile Include="Model\Session\Session.cs" />
+    <Compile Include="Model\TagPlace\TagPlace.cs" />
+    <Compile Include="Model\TagPlace\UserTagPlaceSubscription.cs" />
+    <Compile Include="Model\Tag\Tag.cs" />
+    <Compile Include="Model\Tag\UserTagSubscription.cs" />
+    <Compile Include="Model\User\User.cs" />
+    <Compile Include="Model\User\UserFollow.cs" />
+    <Compile Include="Model\User\UserFollowRequest.cs" />
+    <Compile Include="Model\Vote\Vote.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\VoteServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Util\StringSanitizer.cs" />
+    <EmbeddedResource Include="Controls\Group\GroupResult.resx">
+      <DependentUpon>GroupResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Group\GroupSearchPage.resx">
+      <DependentUpon>GroupSearchPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Group\GroupTitle.resx">
+      <DependentUpon>GroupTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Main\BigTabs.resx">
+      <DependentUpon>BigTabs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ControlPanel\ControlPanel.resx">
+      <DependentUpon>ControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Publication\PublicationPage.resx">
+      <DependentUpon>PublicationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Publication\PublicationsSearchResult.resx">
+      <DependentUpon>PublicationsSearchResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tabs\ButtonTabs.resx">
+      <DependentUpon>ButtonTabs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tag\TagTitle.resx">
+      <DependentUpon>TagTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\User\UserResult.resx">
+      <DependentUpon>UserResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\User\UserSearchPage.resx">
+      <DependentUpon>UserSearchPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\User\UserTitle.resx">
+      <DependentUpon>UserTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Util\GenericUserInformation.resx">
+      <DependentUpon>GenericUserInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Util\Pagination.resx">
+      <DependentUpon>Pagination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Publication\Publication.resx">
+      <DependentUpon>Publication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Publication\PublicationWithAnswers.resx">
+      <DependentUpon>PublicationWithAnswers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Main\PublicationColumns.resx">
+      <DependentUpon>PublicationColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Util\SearchControl.resx">
+      <DependentUpon>SearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Util\SearchTextControl.resx">
+      <DependentUpon>SearchTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tag\TagResult.resx">
+      <DependentUpon>TagResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ControlPanel\TagsGroupsBox.resx">
+      <DependentUpon>TagsGroupsBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tag\TagsSearchPage.resx">
+      <DependentUpon>TagsSearchPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ControlPanel\UsersColumns.resx">
+      <DependentUpon>UsersColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Util\VoteBox.resx">
+      <DependentUpon>VoteBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBasicForm.resx">
+      <DependentUpon>FBasicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateGroup.resx">
+      <DependentUpon>CreateGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewPublication.resx">
+      <DependentUpon>NewPublication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SubscribeToTag.resx">
+      <DependentUpon>SubscribeToTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Main\UserInformation.resx">
+      <DependentUpon>UserInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Controls\Main\UserInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Main\UserInformation.Designer.cs">
+      <DependentUpon>UserInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GroupServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LoginServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PlaceServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PublicationServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TagServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <None Include="Service References\GroupServices\GroupService.wsdl" />
+    <None Include="Service References\GroupServices\GroupService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GroupServices\GroupService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GroupServices\GroupService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GroupServices\GroupService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GroupServices\GroupService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GroupServices\XareuWFClient.GroupServices.Group.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GroupServices\XareuWFClient.GroupServices.GroupJoinRequest.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GroupServices\XareuWFClient.GroupServices.GroupUsers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PlaceServices\PlaceService.wsdl" />
+    <None Include="Service References\PlaceServices\PlaceService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PlaceServices\PlaceService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PlaceServices\PlaceService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PlaceServices\PlaceService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PlaceServices\PlaceService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PlaceServices\XareuWFClient.PlaceServices.Publication.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PlaceServices\XareuWFClient.PlaceServices.TagPlace.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PlaceServices\XareuWFClient.PlaceServices.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TagServices\TagService.wsdl" />
+    <None Include="Service References\TagServices\TagService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TagServices\TagService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TagServices\TagService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TagServices\TagService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TagServices\TagService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TagServices\TagService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TagServices\XareuWFClient.TagServices.Publication.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TagServices\XareuWFClient.TagServices.Tag.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TagServices\XareuWFClient.TagServices.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserServices\XareuWFClient.UserServices.Publication.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserServices\XareuWFClient.UserServices.UserFollow.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserServices\XareuWFClient.UserServices.UserFollowRequest.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VoteServices\VoteService.wsdl" />
+    <None Include="Service References\VoteServices\VoteService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VoteServices\VoteService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VoteServices\VoteService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VoteServices\VoteService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VoteServices\VoteService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VoteServices\VoteService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VoteServices\XareuWFClient.VoteServices.Vote.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <None Include="Resources\buttonTabRight.jpg" />
+    <None Include="Resources\buttonTabsBackground.jpg" />
+    <None Include="Resources\buttonTab.jpg" />
+    <None Include="Resources\buttonTabLeft.jpg" />
+    <None Include="Resources\buttonTab1.jpg" />
+    <None Include="Resources\buttonTabAlone.jpg" />
+    <None Include="Resources\buttonTabAlone1.jpg" />
+    <None Include="Resources\navegacionIzquierda.jpg" />
+    <None Include="Resources\navegacionDerecha.jpg" />
+    <Content Include="Resources\VotePositiveTransparent.jpg" />
+    <None Include="Resources\VotePositiveTransparent1.jpg" />
+    <None Include="Service References\VoteServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\VoteServices\configuration.svcinfo" />
+    <None Include="Service References\VoteServices\configuration91.svcinfo" />
+    <None Include="Service References\VoteServices\VoteService.disco" />
+    <None Include="Service References\TagServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TagServices\configuration.svcinfo" />
+    <None Include="Service References\TagServices\configuration91.svcinfo" />
+    <None Include="Service References\TagServices\TagService.disco" />
+    <None Include="Service References\PlaceServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PlaceServices\configuration.svcinfo" />
+    <None Include="Service References\PlaceServices\configuration91.svcinfo" />
+    <None Include="Service References\PlaceServices\PlaceService.disco" />
+    <None Include="Service References\GroupServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GroupServices\configuration.svcinfo" />
+    <None Include="Service References\GroupServices\configuration91.svcinfo" />
+    <None Include="Service References\GroupServices\GroupService.disco" />
+    <None Include="Resources\positivo.png" />
+    <None Include="Resources\negativo.png" />
+    <None Include="Resources\backgroundQuestions.jpg" />
+    <None Include="Resources\backgroundPublication.bmp" />
+    <None Include="Resources\backgroundPublications.jpg" />
+    <None Include="Service References\UserServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UserServices\configuration.svcinfo" />
+    <None Include="Service References\UserServices\configuration91.svcinfo" />
+    <None Include="Service References\UserServices\UserService.disco" />
+    <None Include="Resources\addTab.jpg" />
+    <None Include="Service References\LoginServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\LoginServices\configuration.svcinfo" />
+    <None Include="Service References\LoginServices\configuration91.svcinfo" />
+    <None Include="Service References\LoginServices\LoginService.disco" />
+    <None Include="Service References\LoginServices\LoginService.wsdl" />
+    <None Include="Service References\LoginServices\LoginService.xsd" />
+    <None Include="Service References\LoginServices\LoginService1.xsd" />
+    <None Include="Service References\LoginServices\LoginService2.xsd" />
+    <None Include="Service References\LoginServices\LoginService3.xsd" />
+    <None Include="Service References\LoginServices\XareuWFClient.LoginServices.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PublicationServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PublicationServices\configuration.svcinfo" />
+    <None Include="Service References\PublicationServices\configuration91.svcinfo" />
+    <None Include="Service References\PublicationServices\PublicationService.disco" />
+    <None Include="app.config" />
+    <None Include="Resources\VotePositive.jpg" />
+    <None Include="Resources\voteNegative.jpg" />
+    <None Include="Resources\separatorComplete.jpg" />
+    <None Include="Resources\add.jpg" />
+    <None Include="Resources\separator.jpg" />
+    <None Include="Resources\search.jpg" />
+    <None Include="Resources\tabCornerUnselectedLeft.jpg" />
+    <None Include="Resources\tabCornerLeftUnselected.jpg" />
+    <None Include="Resources\selectedTabLeft.jpg" />
+    <None Include="Resources\tabCorner.jpg" />
+    <None Include="Resources\backgroundUnselectedTab.jpg" />
+    <None Include="Resources\selectedTab.jpg" />
+    <None Include="Resources\backgroundSelectedTabTop.jpg" />
+    <None Include="Resources\backgroundSelectedTab.jpg" />
+    <None Include="Resources\backgroundTabs.jpg" />
+    <None Include="Service References\PublicationServices\PublicationService.wsdl" />
+    <None Include="Service References\PublicationServices\PublicationService.xsd" />
+    <None Include="Service References\PublicationServices\PublicationService1.xsd" />
+    <None Include="Service References\PublicationServices\PublicationService2.xsd" />
+    <None Include="Service References\PublicationServices\PublicationService3.xsd" />
+    <None Include="Service References\PublicationServices\PublicationService4.xsd" />
+    <None Include="Service References\PublicationServices\XareuWFClient.PublicationServices.Publication.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserServices\UserService.wsdl" />
+    <None Include="Service References\UserServices\UserService.xsd" />
+    <None Include="Service References\UserServices\UserService1.xsd" />
+    <None Include="Service References\UserServices\UserService2.xsd" />
+    <None Include="Service References\UserServices\UserService3.xsd" />
+    <None Include="Service References\UserServices\UserService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServices\UserService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServices\XareuWFClient.UserServices.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\GroupServices\" />
+    <WCFMetadataStorage Include="Service References\LoginServices\" />
+    <WCFMetadataStorage Include="Service References\PlaceServices\" />
+    <WCFMetadataStorage Include="Service References\PublicationServices\" />
+    <WCFMetadataStorage Include="Service References\TagServices\" />
+    <WCFMetadataStorage Include="Service References\UserServices\" />
+    <WCFMetadataStorage Include="Service References\VoteServices\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

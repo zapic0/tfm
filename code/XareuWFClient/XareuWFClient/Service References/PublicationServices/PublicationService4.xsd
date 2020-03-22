@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50828/API/PublicationService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/XareuServices.Model.Publication" />
+  <xs:import schemaLocation="http://localhost:50828/API/PublicationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="GetAllPublications">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="number" type="xs:int" />
+        <xs:element minOccurs="0" name="page" type="xs:int" />
+        <xs:element minOccurs="0" name="questions" type="xs:boolean" />
+        <xs:element minOccurs="0" name="publications" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPublicationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/XareuServices.Model.Publication" minOccurs="0" name="GetAllPublicationsResult" nillable="true" type="q1:ArrayOfPublication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchPublicationWithText">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" type="xs:long" />
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="token" type="q2:guid" />
+        <xs:element minOccurs="0" name="number" type="xs:int" />
+        <xs:element minOccurs="0" name="page" type="xs:int" />
+        <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchPublicationWithTextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/XareuServices.Model.Publication" minOccurs="0" name="SearchPublicationWithTextResult" nillable="true" type="q3:ArrayOfPublication" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="newToken" type="q4:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPublication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="publicationID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPublicationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/XareuServices.Model.Publication" minOccurs="0" name="GetPublicationResult" nillable="true" type="q5:Publication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPublicationAnswers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="publicationID" type="xs:long" />
+        <xs:element minOccurs="0" name="number" type="xs:int" />
+        <xs:element minOccurs="0" name="page" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPublicationAnswersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/XareuServices.Model.Publication" minOccurs="0" name="GetPublicationAnswersResult" nillable="true" type="q6:ArrayOfPublication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPublication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" type="xs:long" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="token" type="q7:guid" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/XareuServices.Model.Publication" minOccurs="0" name="publication" nillable="true" type="q8:Publication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPublicationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPublicationResult" type="xs:boolean" />
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="newToken" type="q9:guid" />
+        <xs:element minOccurs="0" name="publicationID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPublication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" type="xs:long" />
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="token" type="q10:guid" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/XareuServices.Model.Publication" minOccurs="0" name="publication" nillable="true" type="q11:Publication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPublicationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditPublicationResult" type="xs:boolean" />
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="newToken" type="q12:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserPublications">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" type="xs:long" />
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="token" type="q13:guid" />
+        <xs:element minOccurs="0" name="userAuthorID" type="xs:long" />
+        <xs:element minOccurs="0" name="number" type="xs:int" />
+        <xs:element minOccurs="0" name="page" type="xs:int" />
+        <xs:element minOccurs="0" name="questions" type="xs:boolean" />
+        <xs:element minOccurs="0" name="publications" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserPublicationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/XareuServices.Model.Publication" minOccurs="0" name="GetUserPublicationsResult" nillable="true" type="q14:ArrayOfPublication" />
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="newToken" type="q15:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPublicationsForUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" type="xs:long" />
+        <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="token" type="q16:guid" />
+        <xs:element minOccurs="0" name="userAuthorID" type="xs:long" />
+        <xs:element minOccurs="0" name="number" type="xs:int" />
+        <xs:element minOccurs="0" name="page" type="xs:int" />
+        <xs:element minOccurs="0" name="questions" type="xs:boolean" />
+        <xs:element minOccurs="0" name="publications" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPublicationsForUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/XareuServices.Model.Publication" minOccurs="0" name="GetPublicationsForUserResult" nillable="true" type="q17:ArrayOfPublication" />
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="newToken" type="q18:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPublicationsForGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupID" type="xs:long" />
+        <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="token" type="q19:guid" />
+        <xs:element minOccurs="0" name="userAuthorID" type="xs:long" />
+        <xs:element minOccurs="0" name="number" type="xs:int" />
+        <xs:element minOccurs="0" name="page" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPublicationsForGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/XareuServices.Model.Publication" minOccurs="0" name="GetPublicationsForGroupResult" nillable="true" type="q20:ArrayOfPublication" />
+        <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="newToken" type="q21:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

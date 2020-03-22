@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 17.25, 26.5" name="XareuDataClasses">
+  <DataContextMoniker Name="/XareuDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a873f5eb-d254-43eb-b1b0-6e4ffd867e33" absoluteBounds="6.25, 24.5, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/XareuDataClassesDataContext/group" />
+      <nestedChildShapes>
+        <elementListCompartment Id="983b0a51-82ce-426e-b1a9-f9e792e4309c" absoluteBounds="6.265, 24.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2df0d0b6-a285-48e6-95d0-7647b5654cd9" absoluteBounds="15, 14.875, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/XareuDataClassesDataContext/vote" />
+      <nestedChildShapes>
+        <elementListCompartment Id="54cb19df-fc19-4328-a36e-2c7f8f5a2d15" absoluteBounds="15.015, 15.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9449e961-4b04-444b-8271-afebcb408c59" absoluteBounds="12, 20.625, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/XareuDataClassesDataContext/group_in_publication" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ae464f57-8881-4c28-a0c2-6e7b3880640d" absoluteBounds="12.015, 21.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d78af8ce-75a3-4fb5-aeef-eeafc19c491a" absoluteBounds="9, 24.875, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/XareuDataClassesDataContext/group_join_request" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90639c92-6a86-4ee6-a0f8-0b333dca164e" absoluteBounds="9.015, 25.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="02cdf9a1-accb-457f-a05f-f0ea9ce12d83" absoluteBounds="9, 22, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/XareuDataClassesDataContext/groups_users_subscription" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a576914f-4727-439f-b633-179f95ae0e06" absoluteBounds="9.015, 22.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1d8798b2-abb5-45e4-8ecd-b7f5b63f5ba7" absoluteBounds="0.75, 13.25, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/XareuDataClassesDataContext/place_tag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="855fb704-e205-471a-b955-ae81eddee1fc" absoluteBounds="0.765, 13.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="af2edc7a-56b7-44ea-ac92-ec628a615531" absoluteBounds="3.5, 8.875, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/XareuDataClassesDataContext/place_tag_in_publication" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5968a674-ccc2-4309-aacf-9ed7c9be68dc" absoluteBounds="3.515, 9.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="43a849a5-f53f-43fd-977a-8b056cbb621a" absoluteBounds="6.25, 15.75, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/XareuDataClassesDataContext/place_tag_users_subscription" />
+      <nestedChildShapes>
+        <elementListCompartment Id="85d1471d-9e76-48cd-91e8-042600a56dfd" absoluteBounds="6.265, 16.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ade978f1-5f93-42ed-a3b1-366232c05a73" absoluteBounds="9.25, 13.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/XareuDataClassesDataContext/tag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="700eb890-9848-4e12-9953-2decf3a3ca7d" absoluteBounds="9.265, 14.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9db3b2b4-5251-4c32-a953-f35cd0264cc8" absoluteBounds="12, 16.75, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/XareuDataClassesDataContext/tag_in_publication" />
+      <nestedChildShapes>
+        <elementListCompartment Id="689324e4-7f72-4fe0-bb1f-0f9d53191721" absoluteBounds="12.015, 17.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f35ec5f8-002f-4396-abfd-0b39fe097bf0" absoluteBounds="9.25, 19.625, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/XareuDataClassesDataContext/tags_users_subscription" />
+      <nestedChildShapes>
+        <elementListCompartment Id="637ba0f8-212e-4211-90b1-081e44800034" absoluteBounds="9.265, 20.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e17ec426-1d51-439f-9f5b-37320479d4ee" absoluteBounds="6.25, 22.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/XareuDataClassesDataContext/token" />
+      <nestedChildShapes>
+        <elementListCompartment Id="05a40981-a62b-4261-8742-2a3f4a6cb894" absoluteBounds="6.265, 22.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0c79371b-ca7f-44ed-b3bb-9db389166dd9" absoluteBounds="6.25, 20, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/XareuDataClassesDataContext/user_follow_request" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0106a492-c5b9-465f-8032-19587d49fb95" absoluteBounds="6.265, 20.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="02eab28e-1569-4621-9b97-3641918b9995" absoluteBounds="6.25, 18, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/XareuDataClassesDataContext/user_follow" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dcd14748-060c-47e0-9e6e-5cf7301ccd34" absoluteBounds="6.265, 18.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f4509448-5173-4c4f-be6c-34ccd8899524" absoluteBounds="15, 18.125, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/XareuDataClassesDataContext/user_in_publication" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14ff61fd-2d52-494e-9eea-91be37f2370b" absoluteBounds="15.015, 18.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 24.65625); (9.91666666666667 : 24.65625 : JumpStart); (10.0833333333333 : 24.65625 : JumpEnd); (13 : 24.65625); (13 : 21.8189925130208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/group/group_group_in_publication" />
+      <nodes>
+        <classShapeMoniker Id="a873f5eb-d254-43eb-b1b0-6e4ffd867e33" />
+        <classShapeMoniker Id="9449e961-4b04-444b-8271-afebcb408c59" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 25.5681469726563); (9 : 25.5681469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/group/group_group_join_request" />
+      <nodes>
+        <classShapeMoniker Id="a873f5eb-d254-43eb-b1b0-6e4ffd867e33" />
+        <classShapeMoniker Id="d78af8ce-75a3-4fb5-aeef-eeafc19c491a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 24.5); (8.625 : 24.125); (8.625 : 22.5969962565104); (8.66666666666667 : 22.5969962565104 : JumpStart); (8.83333333333333 : 22.5969962565104 : JumpEnd); (9 : 22.5969962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/group/group_groups_users_subscription" />
+      <nodes>
+        <classShapeMoniker Id="a873f5eb-d254-43eb-b1b0-6e4ffd867e33" />
+        <classShapeMoniker Id="02cdf9a1-accb-457f-a05f-f0ea9ce12d83" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 13.25); (1.75 : 9.47199625651042); (3.5 : 9.47199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/place_tag/place_tag_place_tag_in_publication" />
+      <nodes>
+        <classShapeMoniker Id="1d8798b2-abb5-45e4-8ecd-b7f5b63f5ba7" />
+        <classShapeMoniker Id="af2edc7a-56b7-44ea-ac92-ec628a615531" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 13.25); (2.2812525 : 9.80174688476563); (3.5 : 9.80174688476563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/place_tag/place_tag_place_tag_in_publication1" />
+      <nodes>
+        <classShapeMoniker Id="1d8798b2-abb5-45e4-8ecd-b7f5b63f5ba7" />
+        <classShapeMoniker Id="af2edc7a-56b7-44ea-ac92-ec628a615531" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 14.6362939453125); (1.75 : 16.3469962565104); (2.19791916666667 : 16.3469962565104 : JumpStart); (2.36458583333333 : 16.3469962565104 : JumpEnd); (3.49674619791667 : 16.3469962565104 : JumpStart); (3.66341286458333 : 16.3469962565104 : JumpEnd); (6.25 : 16.3469962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/place_tag/place_tag_place_tag_users_subscription" />
+      <nodes>
+        <classShapeMoniker Id="1d8798b2-abb5-45e4-8ecd-b7f5b63f5ba7" />
+        <classShapeMoniker Id="43a849a5-f53f-43fd-977a-8b056cbb621a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 14.3469962565104); (13 : 14.3469962565104); (13 : 16.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/tag/tag_tag_in_publication" />
+      <nodes>
+        <classShapeMoniker Id="ade978f1-5f93-42ed-a3b1-366232c05a73" />
+        <classShapeMoniker Id="9db3b2b4-5251-4c32-a953-f35cd0264cc8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.21875 : 14.9439925130208); (11.21875 : 19.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/tag/tag_tags_users_subscription" />
+      <nodes>
+        <classShapeMoniker Id="ade978f1-5f93-42ed-a3b1-366232c05a73" />
+        <classShapeMoniker Id="f35ec5f8-002f-4396-abfd-0b39fe097bf0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="311d15a8-d990-408c-9160-f62b7cdd14af" absoluteBounds="2.875, 19.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/XareuDataClassesDataContext/user" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3051f6ab-5102-406e-ad04-ce758be0f41e" absoluteBounds="2.89, 19.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.875 : 21.9824039713542); (3.875 : 25.3854484049479); (6.25 : 25.3854484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/user/user_group" />
+      <nodes>
+        <classShapeMoniker Id="311d15a8-d990-408c-9160-f62b7cdd14af" />
+        <classShapeMoniker Id="a873f5eb-d254-43eb-b1b0-6e4ffd867e33" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.58007953125 : 19.25); (3.58007953125 : 15.3469962565104); (9.07291666666667 : 15.3469962565104 : JumpStart); (9.23958333333333 : 15.3469962565104 : JumpEnd); (11.1354166666667 : 15.3469962565104 : JumpStart); (11.3020833333333 : 15.3469962565104 : JumpEnd); (12.9166666666667 : 15.3469962565104 : JumpStart); (13.0833333333333 : 15.3469962565104 : JumpEnd); (15 : 15.3469962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/user/user_vote" />
+      <nodes>
+        <classShapeMoniker Id="311d15a8-d990-408c-9160-f62b7cdd14af" />
+        <classShapeMoniker Id="2df0d0b6-a285-48e6-95d0-7647b5654cd9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.875 : 20.6162019856771); (6 : 20.6162019856771); (6 : 21.75); (8.75 : 21.75); (8.75 : 24.25); (10 : 24.25); (10 : 24.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/user/user_group_join_request" />
+      <nodes>
+        <classShapeMoniker Id="311d15a8-d990-408c-9160-f62b7cdd14af" />
+        <classShapeMoniker Id="d78af8ce-75a3-4fb5-aeef-eeafc19c491a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.875 : 19.40625); (9.09375 : 19.40625); (9.09375 : 22)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/user/user_groups_users_subscription" />
+      <nodes>
+        <classShapeMoniker Id="311d15a8-d990-408c-9160-f62b7cdd14af" />
+        <classShapeMoniker Id="02cdf9a1-accb-457f-a05f-f0ea9ce12d83" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.4062525 : 19.25); (4.4062525 : 16.6767468847656); (6.25 : 16.6767468847656)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/user/user_place_tag_users_subscription" />
+      <nodes>
+        <classShapeMoniker Id="311d15a8-d990-408c-9160-f62b7cdd14af" />
+        <classShapeMoniker Id="43a849a5-f53f-43fd-977a-8b056cbb621a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.875 : 19.78125); (9.01041666666667 : 19.78125 : JumpStart); (9.23958333333333 : 19.78125 : JumpEnd); (9.25 : 19.78125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/user/user_tags_users_subscription" />
+      <nodes>
+        <classShapeMoniker Id="311d15a8-d990-408c-9160-f62b7cdd14af" />
+        <classShapeMoniker Id="f35ec5f8-002f-4396-abfd-0b39fe097bf0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.4062525 : 21.9824039713542); (4.4062525 : 22.9142976888021); (6.25 : 22.9142976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/user/user_token" />
+      <nodes>
+        <classShapeMoniker Id="311d15a8-d990-408c-9160-f62b7cdd14af" />
+        <classShapeMoniker Id="e17ec426-1d51-439f-9f5b-37320479d4ee" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.875 : 21.0637479654948); (5.91666666666667 : 21.0637479654948 : JumpStart); (6.08333333333333 : 21.0637479654948 : JumpEnd); (6.25 : 21.0637479654948)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/user/user_user_follow_request" />
+      <nodes>
+        <classShapeMoniker Id="311d15a8-d990-408c-9160-f62b7cdd14af" />
+        <classShapeMoniker Id="0c79371b-ca7f-44ed-b3bb-9db389166dd9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.875 : 20.2456009928385); (6.25 : 20.2456009928385)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/user/user_user_follow_request1" />
+      <nodes>
+        <classShapeMoniker Id="311d15a8-d990-408c-9160-f62b7cdd14af" />
+        <classShapeMoniker Id="0c79371b-ca7f-44ed-b3bb-9db389166dd9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.67187875 : 19.25); (4.67187875 : 18.5969962565104); (6.25 : 18.5969962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/user/user_user_follow" />
+      <nodes>
+        <classShapeMoniker Id="311d15a8-d990-408c-9160-f62b7cdd14af" />
+        <classShapeMoniker Id="02eab28e-1569-4621-9b97-3641918b9995" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.14062625 : 19.25); (4.14062625 : 18.9267468847656); (4.32291916666667 : 18.9267468847656 : JumpStart); (4.48958583333333 : 18.9267468847656 : JumpEnd); (4.58854541666667 : 18.9267468847656 : JumpStart); (4.75521208333333 : 18.9267468847656 : JumpEnd); (6.25 : 18.9267468847656)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/user/user_user_follow1" />
+      <nodes>
+        <classShapeMoniker Id="311d15a8-d990-408c-9160-f62b7cdd14af" />
+        <classShapeMoniker Id="02eab28e-1569-4621-9b97-3641918b9995" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.875 : 21.9319482421875); (8.66666666666667 : 21.9319482421875 : JumpStart); (8.83333333333333 : 21.9319482421875 : JumpEnd); (12.9166666666667 : 21.9319482421875 : JumpStart); (13.0833333333333 : 21.9319482421875 : JumpEnd); (16 : 21.9319482421875); (16 : 19.3189925130208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/user/user_user_in_publication" />
+      <nodes>
+        <classShapeMoniker Id="311d15a8-d990-408c-9160-f62b7cdd14af" />
+        <classShapeMoniker Id="f4509448-5173-4c4f-be6c-34ccd8899524" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 14.6362939453125); (1.2187475 : 20.6162019856771); (2.875 : 20.6162019856771)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/place_tag/place_tag_user" />
+      <nodes>
+        <classShapeMoniker Id="1d8798b2-abb5-45e4-8ecd-b7f5b63f5ba7" />
+        <classShapeMoniker Id="311d15a8-d990-408c-9160-f62b7cdd14af" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c6766f45-fe42-486b-8f19-4145e3908b50" absoluteBounds="9.125, 15.875, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/XareuDataClassesDataContext/publication" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2d47c99-2c1c-444a-ac5d-cf52861d5762" absoluteBounds="9.14, 16.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.125 : 16.2604484049479); (11.1354166666667 : 16.2604484049479 : JumpStart); (11.3020833333333 : 16.2604484049479 : JumpEnd); (12.9166666666667 : 16.2604484049479 : JumpStart); (13.0833333333333 : 16.2604484049479 : JumpEnd); (15 : 16.2604484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/publication/publication_vote" />
+      <nodes>
+        <classShapeMoniker Id="c6766f45-fe42-486b-8f19-4145e3908b50" />
+        <classShapeMoniker Id="2df0d0b6-a285-48e6-95d0-7647b5654cd9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.15625 : 18.7997054036458); (9.15625 : 21.3502425130208); (12 : 21.3502425130208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/publication/publication_group_in_publication" />
+      <nodes>
+        <classShapeMoniker Id="c6766f45-fe42-486b-8f19-4145e3908b50" />
+        <classShapeMoniker Id="9449e961-4b04-444b-8271-afebcb408c59" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.15625 : 15.875); (9.15625 : 9.47199625651042); (5.5 : 9.47199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/publication/publication_place_tag_in_publication" />
+      <nodes>
+        <classShapeMoniker Id="c6766f45-fe42-486b-8f19-4145e3908b50" />
+        <classShapeMoniker Id="af2edc7a-56b7-44ea-ac92-ec628a615531" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.125 : 17.3469962565104); (11.1354166666667 : 17.3469962565104 : JumpStart); (11.3020833333333 : 17.3469962565104 : JumpEnd); (12 : 17.3469962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/publication/publication_tag_in_publication" />
+      <nodes>
+        <classShapeMoniker Id="c6766f45-fe42-486b-8f19-4145e3908b50" />
+        <classShapeMoniker Id="9db3b2b4-5251-4c32-a953-f35cd0264cc8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.125 : 18.4623527018229); (11.1354166666667 : 18.4623527018229 : JumpStart); (11.3020833333333 : 18.4623527018229 : JumpEnd); (15 : 18.4623527018229)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/publication/publication_user_in_publication" />
+      <nodes>
+        <classShapeMoniker Id="c6766f45-fe42-486b-8f19-4145e3908b50" />
+        <classShapeMoniker Id="f4509448-5173-4c4f-be6c-34ccd8899524" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 14.6362939453125); (2.2812525 : 17.4042471171061); (3.49674619791667 : 17.4042471171061 : JumpStart); (3.66341286458333 : 17.4042471171061 : JumpEnd); (4.32291916666667 : 17.4042471171061 : JumpStart); (4.48958583333333 : 17.4042471171061 : JumpEnd); (9.125 : 17.4042471171061)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/place_tag/place_tag_publication" />
+      <nodes>
+        <classShapeMoniker Id="1d8798b2-abb5-45e4-8ecd-b7f5b63f5ba7" />
+        <classShapeMoniker Id="c6766f45-fe42-486b-8f19-4145e3908b50" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.875 : 21.5993969726563); (5.91666666666667 : 21.5993969726563 : JumpStart); (6.08333333333333 : 21.5993969726563 : JumpEnd); (9.140625 : 21.5993969726563); (9.140625 : 18.7997054036458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XareuDataClassesDataContext/user/user_publication" />
+      <nodes>
+        <classShapeMoniker Id="311d15a8-d990-408c-9160-f62b7cdd14af" />
+        <classShapeMoniker Id="c6766f45-fe42-486b-8f19-4145e3908b50" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="07d48de5-8dba-49ba-a456-c6219536c1a1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50828/API/GroupService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GroupService.xsd" MetadataType="Schema" ID="deeff758-58fd-4fa2-bb9b-15a2fb19820e" SourceId="1" SourceUrl="http://localhost:50828/API/GroupService.svc?xsd=xsd2" />
+    <MetadataFile FileName="GroupService1.xsd" MetadataType="Schema" ID="f79c9fc5-8383-424a-9ac9-1253eac3b8ea" SourceId="1" SourceUrl="http://localhost:50828/API/GroupService.svc?xsd=xsd1" />
+    <MetadataFile FileName="GroupService.wsdl" MetadataType="Wsdl" ID="6b608927-b045-42ce-9f5c-a53f4a7a8831" SourceId="1" SourceUrl="http://localhost:50828/API/GroupService.svc?wsdl" />
+    <MetadataFile FileName="GroupService2.xsd" MetadataType="Schema" ID="804dd7f2-e125-48f7-a0d3-de18766abfec" SourceId="1" SourceUrl="http://localhost:50828/API/GroupService.svc?xsd=xsd3" />
+    <MetadataFile FileName="GroupService.disco" MetadataType="Disco" ID="1333bd55-a671-4df6-a21f-e712987b3cbe" SourceId="1" SourceUrl="http://localhost:50828/API/GroupService.svc?disco" />
+    <MetadataFile FileName="GroupService3.xsd" MetadataType="Schema" ID="d25a1db4-d698-4453-84aa-0adfc19f7cb4" SourceId="1" SourceUrl="http://localhost:50828/API/GroupService.svc?xsd=xsd4" />
+    <MetadataFile FileName="GroupService4.xsd" MetadataType="Schema" ID="58096384-f932-4ff3-9ef8-bfbf8b58e940" SourceId="1" SourceUrl="http://localhost:50828/API/GroupService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

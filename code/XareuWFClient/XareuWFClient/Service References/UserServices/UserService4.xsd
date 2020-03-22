@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/XareuServices.Model.UserFollow" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/XareuServices.Model.UserFollow" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50828/API/UserService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/XareuServices.Model.User" />
+  <xs:complexType name="UserFollow">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/XareuServices.Model.User" minOccurs="0" name="UserFollowed" nillable="true" type="q1:User" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/XareuServices.Model.User" minOccurs="0" name="UserFollowing" nillable="true" type="q2:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserFollow" nillable="true" type="tns:UserFollow" />
+  <xs:complexType name="ArrayOfUserFollow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserFollow" nillable="true" type="tns:UserFollow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserFollow" nillable="true" type="tns:ArrayOfUserFollow" />
+  <xs:complexType name="UserFollowRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateTime" type="xs:dateTime" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/XareuServices.Model.User" minOccurs="0" name="UserFollowed" nillable="true" type="q3:User" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/XareuServices.Model.User" minOccurs="0" name="UserFollower" nillable="true" type="q4:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserFollowRequest" nillable="true" type="tns:UserFollowRequest" />
+  <xs:complexType name="ArrayOfUserFollowRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserFollowRequest" nillable="true" type="tns:UserFollowRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserFollowRequest" nillable="true" type="tns:ArrayOfUserFollowRequest" />
+</xs:schema>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/XareuServices.Model.Group" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/XareuServices.Model.Group" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50828/API/GroupService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/XareuServices.Model.User" />
+  <xs:complexType name="Group">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Creation" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="IsPrivate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/XareuServices.Model.User" minOccurs="0" name="Owner" nillable="true" type="q1:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Group" nillable="true" type="tns:Group" />
+  <xs:complexType name="ArrayOfGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Group" nillable="true" type="tns:Group" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGroup" nillable="true" type="tns:ArrayOfGroup" />
+  <xs:complexType name="GroupJoinRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Group" nillable="true" type="tns:Group" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/XareuServices.Model.User" minOccurs="0" name="User" nillable="true" type="q2:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GroupJoinRequest" nillable="true" type="tns:GroupJoinRequest" />
+  <xs:complexType name="ArrayOfGroupJoinRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GroupJoinRequest" nillable="true" type="tns:GroupJoinRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGroupJoinRequest" nillable="true" type="tns:ArrayOfGroupJoinRequest" />
+  <xs:complexType name="ArrayOfGroupUsers">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GroupUsers" nillable="true" type="tns:GroupUsers" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGroupUsers" nillable="true" type="tns:ArrayOfGroupUsers" />
+  <xs:complexType name="GroupUsers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Group" nillable="true" type="tns:Group" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/XareuServices.Model.User" minOccurs="0" name="User" nillable="true" type="q3:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GroupUsers" nillable="true" type="tns:GroupUsers" />
+</xs:schema>

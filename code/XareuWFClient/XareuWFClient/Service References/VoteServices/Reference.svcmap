@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4b61e1b8-3cf3-4220-995d-d1d88d943d18" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50828/API/VoteService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="VoteService.xsd" MetadataType="Schema" ID="f17ec8f9-03f6-4701-a92a-d6ccae9917ce" SourceId="1" SourceUrl="http://localhost:50828/API/VoteService.svc?xsd=xsd2" />
+    <MetadataFile FileName="VoteService1.xsd" MetadataType="Schema" ID="00f583de-9457-4b91-97b0-a3768fd76add" SourceId="1" SourceUrl="http://localhost:50828/API/VoteService.svc?xsd=xsd0" />
+    <MetadataFile FileName="VoteService2.xsd" MetadataType="Schema" ID="2c245ee5-b4a1-4980-8ad9-388bb3b183d0" SourceId="1" SourceUrl="http://localhost:50828/API/VoteService.svc?xsd=xsd1" />
+    <MetadataFile FileName="VoteService3.xsd" MetadataType="Schema" ID="6ec65da7-6c91-45a2-bf7f-4ba8af54ab3e" SourceId="1" SourceUrl="http://localhost:50828/API/VoteService.svc?xsd=xsd3" />
+    <MetadataFile FileName="VoteService4.xsd" MetadataType="Schema" ID="9dbd30b8-650d-4a58-92c1-a1caf22af987" SourceId="1" SourceUrl="http://localhost:50828/API/VoteService.svc?xsd=xsd4" />
+    <MetadataFile FileName="VoteService.wsdl" MetadataType="Wsdl" ID="3eeac0e8-29c1-4803-a292-cd869d778c7d" SourceId="1" SourceUrl="http://localhost:50828/API/VoteService.svc?wsdl" />
+    <MetadataFile FileName="VoteService5.xsd" MetadataType="Schema" ID="d2e61786-f31c-4d7b-916a-ce3fb9ade815" SourceId="1" SourceUrl="http://localhost:50828/API/VoteService.svc?xsd=xsd5" />
+    <MetadataFile FileName="VoteService.disco" MetadataType="Disco" ID="f065bcf7-8116-444a-b593-f20483e3c5e5" SourceId="1" SourceUrl="http://localhost:50828/API/VoteService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

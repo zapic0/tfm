@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="XareuDB" Class="DCXareuDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="XareuDBConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[group]" Member="groups">
+    <Type Name="group">
+      <Column Name="group_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="group_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="user_id_owner" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="group_creation" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="group_is_private" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="group_group_in_publication" Member="group_in_publications" ThisKey="group_id" OtherKey="group_id" Type="group_in_publication" />
+      <Association Name="group_group_join_request" Member="group_join_requests" ThisKey="group_id" OtherKey="group_id" Type="group_join_request" />
+      <Association Name="group_groups_users_subscription" Member="groups_users_subscriptions" ThisKey="group_id" OtherKey="group_id" Type="groups_users_subscription" />
+      <Association Name="user_group" Member="user" ThisKey="user_id_owner" OtherKey="user_id" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vote" Member="votes">
+    <Type Name="vote">
+      <Column Name="vote_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vote_author" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="vote_publication" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="vote_positive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="vote_karma" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="user_vote" Member="user" ThisKey="vote_author" OtherKey="user_id" Type="user" IsForeignKey="true" />
+      <Association Name="publication_vote" Member="publication" ThisKey="vote_publication" OtherKey="publication_id" Type="publication" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.group_in_publication" Member="group_in_publications">
+    <Type Name="group_in_publication">
+      <Column Name="group_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="publication_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="group_group_in_publication" Member="group" ThisKey="group_id" OtherKey="group_id" Type="group" IsForeignKey="true" />
+      <Association Name="publication_group_in_publication" Member="publication" ThisKey="publication_id" OtherKey="publication_id" Type="publication" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.group_join_request" Member="group_join_requests">
+    <Type Name="group_join_request">
+      <Column Name="group_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="user_id_request" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="datetime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="group_group_join_request" Member="group" ThisKey="group_id" OtherKey="group_id" Type="group" IsForeignKey="true" />
+      <Association Name="user_group_join_request" Member="user" ThisKey="user_id_request" OtherKey="user_id" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.groups_users_subscriptions" Member="groups_users_subscriptions">
+    <Type Name="groups_users_subscription">
+      <Column Name="group_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="group_groups_users_subscription" Member="group" ThisKey="group_id" OtherKey="group_id" Type="group" IsForeignKey="true" />
+      <Association Name="user_groups_users_subscription" Member="user" ThisKey="user_id" OtherKey="user_id" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.place_tag" Member="place_tags">
+    <Type Name="place_tag">
+      <Column Name="place_tag_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="place_tag_name" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="place_tag_parent" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="place_tag_place_tag_in_publication" Member="place_tag_in_publications" ThisKey="place_tag_id" OtherKey="place_tag_id" Type="place_tag_in_publication" />
+      <Association Name="place_tag_place_tag_in_publication1" Member="place_tag_in_publications1" ThisKey="place_tag_id" OtherKey="place_tag_id" Type="place_tag_in_publication" />
+      <Association Name="place_tag_place_tag_users_subscription" Member="place_tag_users_subscriptions" ThisKey="place_tag_id" OtherKey="place_tag_id" Type="place_tag_users_subscription" />
+      <Association Name="place_tag_user" Member="users" ThisKey="place_tag_id" OtherKey="user_default_place" Type="user" />
+      <Association Name="place_tag_publication" Member="publications" ThisKey="place_tag_id" OtherKey="place_tag_id" Type="publication" />
+    </Type>
+  </Table>
+  <Table Name="dbo.place_tag_in_publication" Member="place_tag_in_publications">
+    <Type Name="place_tag_in_publication">
+      <Column Name="place_tag_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="publication_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="place_tag_place_tag_in_publication" Member="place_tag" ThisKey="place_tag_id" OtherKey="place_tag_id" Type="place_tag" IsForeignKey="true" />
+      <Association Name="place_tag_place_tag_in_publication1" Member="place_tag1" ThisKey="place_tag_id" OtherKey="place_tag_id" Type="place_tag" IsForeignKey="true" />
+      <Association Name="publication_place_tag_in_publication" Member="publication" ThisKey="publication_id" OtherKey="publication_id" Type="publication" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.place_tag_users_subscription" Member="place_tag_users_subscriptions">
+    <Type Name="place_tag_users_subscription">
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="place_tag_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="place_tag_place_tag_users_subscription" Member="place_tag" ThisKey="place_tag_id" OtherKey="place_tag_id" Type="place_tag" IsForeignKey="true" />
+      <Association Name="user_place_tag_users_subscription" Member="user" ThisKey="user_id" OtherKey="user_id" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tag" Member="tags">
+    <Type Name="tag">
+      <Column Name="tag_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tag_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tag_tag_in_publication" Member="tag_in_publications" ThisKey="tag_id" OtherKey="tag_id" Type="tag_in_publication" />
+      <Association Name="tag_tags_users_subscription" Member="tags_users_subscriptions" ThisKey="tag_id" OtherKey="tag_id" Type="tags_users_subscription" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tag_in_publication" Member="tag_in_publications">
+    <Type Name="tag_in_publication">
+      <Column Name="tag_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="publication_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="tag_tag_in_publication" Member="tag" ThisKey="tag_id" OtherKey="tag_id" Type="tag" IsForeignKey="true" />
+      <Association Name="publication_tag_in_publication" Member="publication" ThisKey="publication_id" OtherKey="publication_id" Type="publication" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tags_users_subscriptions" Member="tags_users_subscriptions">
+    <Type Name="tags_users_subscription">
+      <Column Name="tag_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="tag_tags_users_subscription" Member="tag" ThisKey="tag_id" OtherKey="tag_id" Type="tag" IsForeignKey="true" />
+      <Association Name="user_tags_users_subscription" Member="user" ThisKey="user_id" OtherKey="user_id" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.token" Member="tokens">
+    <Type Name="token">
+      <Column Name="token_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="token" Member="token1" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="token_was_used" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="user_token" Member="user" ThisKey="user_id" OtherKey="user_id" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.user_follow_request" Member="user_follow_requests">
+    <Type Name="user_follow_request">
+      <Column Name="user_id_request" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="user_id_requested" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="datetime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="user_user_follow_request" Member="user" ThisKey="user_id_request" OtherKey="user_id" Type="user" IsForeignKey="true" />
+      <Association Name="user_user_follow_request1" Member="user1" ThisKey="user_id_requested" OtherKey="user_id" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.user_follows" Member="user_follows">
+    <Type Name="user_follow">
+      <Column Name="user_id_follower" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="user_id_followed" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="user_user_follow" Member="user" ThisKey="user_id_follower" OtherKey="user_id" Type="user" IsForeignKey="true" />
+      <Association Name="user_user_follow1" Member="user1" ThisKey="user_id_followed" OtherKey="user_id" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.user_in_publication" Member="user_in_publications">
+    <Type Name="user_in_publication">
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="publication_id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="user_user_in_publication" Member="user" ThisKey="user_id" OtherKey="user_id" Type="user" IsForeignKey="true" />
+      <Association Name="publication_user_in_publication" Member="publication" ThisKey="publication_id" OtherKey="publication_id" Type="publication" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[user]" Member="users">
+    <Type Name="user">
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_nick" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="user_email" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="user_default_place" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="user_password" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="user_is_admin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="user_signup" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="user_is_private" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="user_karma" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="user_picture" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="user_group" Member="groups" ThisKey="user_id" OtherKey="user_id_owner" Type="group" />
+      <Association Name="user_vote" Member="votes" ThisKey="user_id" OtherKey="vote_author" Type="vote" />
+      <Association Name="user_group_join_request" Member="group_join_requests" ThisKey="user_id" OtherKey="user_id_request" Type="group_join_request" />
+      <Association Name="user_groups_users_subscription" Member="groups_users_subscriptions" ThisKey="user_id" OtherKey="user_id" Type="groups_users_subscription" />
+      <Association Name="user_place_tag_users_subscription" Member="place_tag_users_subscriptions" ThisKey="user_id" OtherKey="user_id" Type="place_tag_users_subscription" />
+      <Association Name="user_tags_users_subscription" Member="tags_users_subscriptions" ThisKey="user_id" OtherKey="user_id" Type="tags_users_subscription" />
+      <Association Name="user_token" Member="tokens" ThisKey="user_id" OtherKey="user_id" Type="token" />
+      <Association Name="user_user_follow_request" Member="user_follow_requests" ThisKey="user_id" OtherKey="user_id_request" Type="user_follow_request" />
+      <Association Name="user_user_follow_request1" Member="user_follow_requests1" ThisKey="user_id" OtherKey="user_id_requested" Type="user_follow_request" />
+      <Association Name="user_user_follow" Member="user_follows" ThisKey="user_id" OtherKey="user_id_follower" Type="user_follow" />
+      <Association Name="user_user_follow1" Member="user_follows1" ThisKey="user_id" OtherKey="user_id_followed" Type="user_follow" />
+      <Association Name="user_user_in_publication" Member="user_in_publications" ThisKey="user_id" OtherKey="user_id" Type="user_in_publication" />
+      <Association Name="user_publication" Member="publications" ThisKey="user_id" OtherKey="user_id_author" Type="publication" />
+      <Association Name="place_tag_user" Member="place_tag" ThisKey="user_default_place" OtherKey="place_tag_id" Type="place_tag" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.publication" Member="publications">
+    <Type Name="publication">
+      <Column Name="publication_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="publication_text" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="user_id_author" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="publication_datetime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="place_tag_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="publication_is_question" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="publication_answer_to" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="publlication_is_private" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="publication_karma" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="positive_votes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="negative_votes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="publication_vote" Member="votes" ThisKey="publication_id" OtherKey="vote_publication" Type="vote" />
+      <Association Name="publication_group_in_publication" Member="group_in_publications" ThisKey="publication_id" OtherKey="publication_id" Type="group_in_publication" />
+      <Association Name="publication_place_tag_in_publication" Member="place_tag_in_publications" ThisKey="publication_id" OtherKey="publication_id" Type="place_tag_in_publication" />
+      <Association Name="publication_tag_in_publication" Member="tag_in_publications" ThisKey="publication_id" OtherKey="publication_id" Type="tag_in_publication" />
+      <Association Name="publication_user_in_publication" Member="user_in_publications" ThisKey="publication_id" OtherKey="publication_id" Type="user_in_publication" />
+      <Association Name="place_tag_publication" Member="place_tag" ThisKey="place_tag_id" OtherKey="place_tag_id" Type="place_tag" IsForeignKey="true" />
+      <Association Name="user_publication" Member="user" ThisKey="user_id_author" OtherKey="user_id" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
